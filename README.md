@@ -1,5 +1,13 @@
 # Blog_App
-This is a FastApi implementation for a blog system. This project include authentication using JSON Web Tokens (JWTs),SQLAlchemy database.
+This is a FastApi implementation for a blog system. This project include authentication using JSON Web Tokens (JWTs) and using SQLAlchemy database.
+
+## Functionalities
+
+ - Create user
+ - Hash user password (using the bcrypt algorithm)
+ - Show single user
+ 
+
 ## How to install
 ```
 git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Blog_App.git
