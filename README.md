@@ -3,9 +3,10 @@ This is a FastApi implementation for a blog system. This project include authent
 
 ## Functionalities
 
- - Create user
+ - Create user/blog
  - Hash user password (using the bcrypt algorithm)
  - Show single user
+ 
  
 
 ## How to install
