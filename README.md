@@ -24,15 +24,24 @@ cd app
 pip3 install -r requirements.txt
 ```
 
-## Docker
+# Docker
+### Backend:
+```
+docker build . -t backend-app
+docker run -d -p 8000:8000 backend-app
 
-### Docker build
 ```
-docker build -t python-fastapi
+### Frontend:
+change directory to:
 ```
-### Docker run
+cd frontend
+cd blog-app
 ```
-docker container run --publish 80:80 --name blog-app-container python-fastapi
+
 ```
+docker build . -t frontend-app
+docker run -d -p 3000:3000 frontend-app
+```
+
 
 
