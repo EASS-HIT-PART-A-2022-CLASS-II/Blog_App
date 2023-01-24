@@ -10,7 +10,9 @@ app = FastAPI(
 
 
 models.Base.metadata.create_all(engine)
- 
+@app.get("/homepage")
+async def root():
+    return {"message": "Blog"}
 
 app.include_router(login.router)
 app.include_router(blog.router)

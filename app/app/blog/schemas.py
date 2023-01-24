@@ -3,6 +3,11 @@ from typing import List,Optional
 
 
 
+from pydantic import BaseModel
+from typing import List,Optional
+
+
+
 class BlogBase(BaseModel):
     title: str
     body: str
@@ -12,6 +17,12 @@ class Blog(BlogBase):
     class Config():
         orm_mode=True
 
+class BlogUser(BlogBase):
+    id:int
+    owner_id: int
+
+    class Config:
+        orm_mode = True
 
 class User(BaseModel):
     name: str
@@ -20,6 +31,12 @@ class User(BaseModel):
 
     class Config():
         orm_mode=True
+
+class UserBlog(User):
+    id: int
+
+    class Config:
+        orm_mode =True 
 
 class ShowUser(BaseModel):
     name:str
@@ -48,4 +65,3 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     email: Optional[str] = None
-
