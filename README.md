@@ -43,5 +43,10 @@ docker build . -t frontend-app
 docker run -d -p 3000:3000 frontend-app
 ```
 
+and then navigate to: 
+```
+http://localhost:3000/
+```
+
 
 
