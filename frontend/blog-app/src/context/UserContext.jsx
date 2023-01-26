@@ -16,7 +16,7 @@ export const UserProvider = (props) => {
         },
       };
       
-      const response = await fetch("/user/me", requestOptions);
+      const response = await fetch("http://localhost:8000/user/me", requestOptions);
 
       if (!response.ok) {
          

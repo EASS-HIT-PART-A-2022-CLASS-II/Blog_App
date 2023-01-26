@@ -13,7 +13,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
           Authorization: "Bearer " + token,
         },
       };
-      const response = await fetch(`/blog/${id}`, requestOptions);
+      const response = await fetch(`http://localhost:8000/blog/${id}`, requestOptions);
 
       if (!response.ok) {
         setErrorMessage("Could not get the blog");
@@ -48,7 +48,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
 	note: note,
       }),
     };
-    const response = await fetch("/blog/", requestOptions);
+    const response = await fetch("http://localhost:8000/blog/", requestOptions);
     if (!response.ok) {
       setErrorMessage("Something went wrong when creating blog");
     } else {
@@ -70,7 +70,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
         note: note,
       }),
     };
-    const response = await fetch(`/blog/${id}`, requestOptions);
+    const response = await fetch(`http://localhost:8000/blog/${id}`, requestOptions);
     if (!response.ok) {
       setErrorMessage("Something went wrong when updating blog");
     } else {

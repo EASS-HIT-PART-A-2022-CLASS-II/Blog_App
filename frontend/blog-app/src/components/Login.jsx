@@ -17,7 +17,7 @@ export const Login = (props) => {
       ),
     };
 
-    const response = await fetch("/login", requestOptions);
+    const response = await fetch("http://localhost:8000/login", requestOptions);
     const data = await response.json();
 
     if (!response.ok) {

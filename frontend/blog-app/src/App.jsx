@@ -17,7 +17,7 @@ const App = () => {
         "Content-Type": "application/json",
       },
     };
-    const response = await fetch("/homepage", requestOptions);
+    const response = await fetch("http://localhost:8000/homepage", requestOptions);
     const data = await response.json();
 
     if (!response.ok) {

@@ -25,7 +25,7 @@ const Table = () => {
         Authorization: "Bearer " + token,
       },
     };
-    const response = await fetch(`/blog/${id}`, requestOptions);
+    const response = await fetch(`http://localhost:8000/blog/${id}`, requestOptions);
     if (!response.ok) {
       setErrorMessage("Failed to delete blog");
     }
@@ -41,7 +41,7 @@ const Table = () => {
         Authorization: "Bearer " + token,
       },
     };
-    const response = await fetch("/blog/", requestOptions);
+    const response = await fetch("http://localhost:8000/blog/", requestOptions);
     if (!response.ok) {
       setErrorMessage("Something went wrong. Couldn't load the blogs");
     } else {

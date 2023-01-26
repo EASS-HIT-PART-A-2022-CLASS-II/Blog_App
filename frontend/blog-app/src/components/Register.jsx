@@ -17,7 +17,7 @@ const Register = () => {
       body: JSON.stringify({ name: name, email: email, password: password }),
     };
 
-    const response = await fetch("/user/", requestOptions);
+    const response = await fetch("http://localhost:8000/user/", requestOptions);
     const data = await response.json();
     console.log(data[1]["access_token"])
     if (!response.ok) {
