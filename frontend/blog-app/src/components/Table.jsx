@@ -82,14 +82,14 @@ const Table = () => {
           <thead>
             <tr>
               <th>Title</th>
-              <th>Note</th>
+              <th>Body</th>
             </tr>
           </thead>
           <tbody>
             {blogs.map((blog) => (
               <tr key={blog.id}>
                 <td>{blog.title}</td>
-                <td>{blog.note}</td>
+                <td>{blog.body}</td>
                 <td>
                   <button
                     className="button mr-2 is-info is-light"
