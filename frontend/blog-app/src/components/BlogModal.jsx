@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
   const [title, setTitle] = useState("");
-  const [note, setNote] = useState("");
+  const [body, setBody] = useState("");
    
   useEffect(() => {
     const getBlog = async () => {
@@ -20,7 +20,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
       } else {
         const data = await response.json();
         setTitle(data.title);
-        setNote(data.note);
+        setNote(data.body);
       }
     };
 
@@ -31,7 +31,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
 
   const cleanFormData = () => {
     setTitle("");
-    setNote("");
+    setBody("");
 	
   };
 
@@ -45,7 +45,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
       },
       body: JSON.stringify({
 	title: title,
-	note: note,
+	body: body,
       }),
     };
     const response = await fetch("http://localhost:8000/blog/", requestOptions);
@@ -67,7 +67,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
       },
       body: JSON.stringify({
 	title: title,
-        note: note,
+        body: body,
       }),
     };
     const response = await fetch(`http://localhost:8000/blog/${id}`, requestOptions);
@@ -104,13 +104,13 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Note</label>
+              <label className="label">Body</label>
               <div className="control">
                 <input
                   type="text"
-                  placeholder="Enter note"
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
+                  placeholder="Enter Text"
+                  value={body}
+                  onChange={(e) => setBody(e.target.value)}
                   className="input"
                 />
               </div>
