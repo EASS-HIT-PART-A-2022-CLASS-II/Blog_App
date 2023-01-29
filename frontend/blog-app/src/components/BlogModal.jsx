@@ -20,7 +20,7 @@ const BlogModal = ({ active, handleModal, token, id, setErrorMessage }) => {
       } else {
         const data = await response.json();
         setTitle(data.title);
-        setNote(data.body);
+        setBody(data.body);
       }
     };
 
