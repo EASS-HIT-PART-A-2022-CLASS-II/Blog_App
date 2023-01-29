@@ -22,7 +22,7 @@ def all_blogs(db:Session=Depends(get_db),current_user: schemas.User = Depends(oa
     return blog.get_all(db)
 
 @router.post('/',status_code=status.HTTP_201_CREATED)
-def create(request: schemas.Blog, db: Session= Depends(get_db),current_user: schemas.UserBlog = Depends(oauth2.get_current_user)):
+def create(request: schemas.Blog, db: Session= Depends(get_db),current_user: schemas.User = Depends(oauth2.get_current_user)):
     user_id =1
     return blog.create(request = request,db=db,user_id=user_id)
 
