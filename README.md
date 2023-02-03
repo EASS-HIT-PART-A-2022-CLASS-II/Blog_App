@@ -1,4 +1,5 @@
 # Blog_App
+https://user-images.githubusercontent.com/98183254/216711828-e1e0862e-e9a9-4644-9596-5da8627b9a58.mp4
 This is a FastApi implementation for a blog system. This project include authentication using JSON Web Tokens (JWTs) and using sqlalchemy database.
 Blog application made using React for the frontend and Python/FastAPI for the backend. 
 
