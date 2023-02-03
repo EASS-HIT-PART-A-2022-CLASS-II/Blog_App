@@ -48,7 +48,7 @@ and then navigate to:
 http://localhost:3000/
 ```
 
-#Docker Compose 
+# Docker Compose 
 go to Blog_App directory:
 ```
 cd Blog_App
