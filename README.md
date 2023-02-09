@@ -23,7 +23,7 @@ git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Blog_App.git
 ```
 cd Blog_App/app/app
 ```
-### Install all the requirements
+### Install all  requirements
 
 ```
 pip3 install -r requirements.txt
