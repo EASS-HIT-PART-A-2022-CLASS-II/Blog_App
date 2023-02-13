@@ -19,7 +19,7 @@ class Blog(BlogBase):
 
 class BlogUser(BlogBase):
     id:int
-    owner_id: int
+    user_id: int
 
     class Config:
         orm_mode = True
@@ -39,6 +39,7 @@ class UserBlog(User):
         orm_mode =True 
 
 class ShowUser(BaseModel):
+    id:int
     name:str
     email:str
     blogs: List[Blog] = []

@@ -2,6 +2,7 @@ from blog.database import Base
 from sqlalchemy import Column, Integer, String,ForeignKey
 from sqlalchemy.orm import relationship 
 
+
 class Blog(Base):
     __tablename__ = 'blogs'
 
